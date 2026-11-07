@@ -1,0 +1,56 @@
+{
+  "name": "gas-prices-today-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for gas prices today: the EIA weekly average retail price of regular, midgrade, premium gasoline and diesel for the US, each region, nine states and ten cities, with change from last week, last month and last year, and fill-up cost.",
+  "type": "module",
+  "license": "MIT",
+  "author": "theluckystrike",
+  "mcpName": "io.github.theluckystrike/gas-prices-today-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theluckystrike/gas-prices-today-mcp"
+  },
+  "homepage": "https://www.mcpstamp.com/servers/",
+  "bin": {
+    "gas-prices-today-mcp": "dist/stdio.js"
+  },
+  "main": "dist/stdio.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test",
+    "start": "node dist/stdio.js",
+    "deploy": "npx wrangler@4 deploy"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "gas-prices",
+    "gas-prices-today",
+    "gasoline",
+    "diesel",
+    "eia",
+    "fuel-prices",
+    "price-of-gas",
+    "gas-price-by-state",
+    "fill-up-cost",
+    "cloudflare-workers"
+  ]
+}
